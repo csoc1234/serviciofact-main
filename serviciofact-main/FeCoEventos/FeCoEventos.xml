@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FeCoEventos</name>
+    </assembly>
+    <members>
+        <member name="M:FeCoEventos.Application.Main.EventCreate.Generate(FeCoEventos.Models.Requests.EventsBuildRequest,FeCoEventos.Util.TableLog.LogRequest,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="request"></param>
+            <param name="logRequest"></param>
+        </member>
+        <member name="T:FeCoEventos.Application.Main.EventList">
+            <summary>
+            Lista los eventos activos en el sistema
+            </summary>
+        </member>
+        <member name="M:FeCoEventos.Application.Main.EventList.GetList(FeCoEventos.Application.Dto.EventStatusDto,FeCoEventos.Util.TableLog.LogRequest)">
+            <summary>
+            Se consulta la lista de eventos activos
+            </summary>
+            <param name="request">Rango de fecha, estatus y codigo de evento para la consulta</param>
+            <param name="logRequest">Valores del Controller para el log</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.ArchivosController.GetEvent(System.String,System.String,System.Int32)">
+            <summary>
+            Permite la descarga de archivos Xml asociados a un evento
+            </summary>
+            <param name="eventId">Numero de Evento</param>
+            <param name="trackId">Tracking ID</param>
+            <param name="fileType">Tipos de Archivos</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.ArchivosController.GetExternalEvent(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Permite la descarga de archivos XML asociados a un evento externo.
+            </summary>
+            <param name="uuid">cufe o cude</param>
+            <param name="DocumentId">Identificador de la factura</param>
+            <param name="EventType">Tipo de evento</param>
+            <param name="fileType">Tipo de archivo</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.EventosController.PostBuildApplicationResponse(FeCoEventos.Models.Requests.EventsBuildRequest)">
+            <summary>
+            Establece un Nuevo Evento de Factura
+            </summary>
+            <param name="request">Datos del Evento</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.EventosController.GetAnysEvents(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Obtiene una lista de Eventos de Factura de un Status determinado
+            </summary>
+            <param name="status">Status</param>
+            <param name="dateFrom">Fecha Inicial</param>
+            <param name="dateTo">Fecha Final</param>
+            <param name="eventCode">Codigo de Evento</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.EventosController.PutEventsPending(System.String,System.String,FeCoEventos.Models.Requests.EventUpdatingRequest)">
+            <summary>
+            Actualiza Un Evento de Factura
+            </summary>
+            <param name="eventId">Identidicador del Evento</param>
+            <param name="trackId">Tracking ID del Evento</param>
+            <param name="request">Datos del Evento</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.EventosController.GetEvent(System.String,System.String)">
+            <summary>
+            Retorna el estatus del evento
+            </summary>
+            <param name="eventId">ID del evento</param>
+            <param name="trackId">Tracking ID para seguimiento</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.EventosController.GetStatusByEventUuid(System.String,System.String)">
+            <summary>
+            Retorna la información de un evento determinado.
+            </summary>
+            <param name="eventId">Identificador del Evento</param>
+            <param name="eventUuid">UUID del Evento</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.HabilitacionController.PutDeliveryAsyncSet(System.String,System.String,FeCoEventos.Application.Dto.EventDeliveryAsyncDto)">
+            <summary>
+            Permite actualizar el estatus en la entrega async
+            </summary>
+            <param name="eventId">Numero de Evento</param>
+            <param name="trackId">Tracking ID para seguimiento</param>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Controllers.HabilitacionController.GetListEvents(System.String)">
+            <summary>
+            Resumen de los eventos enviados en habilitacion de un contribyente
+            </summary>
+            <param name="nit">Numero de Identificacion del Contribuyente</param>
+            <returns></returns>
+        </member>
+        <member name="M:FeCoEventos.Domain.Core.EventFileDomain.GetFileXml(TFHKA.EventsDian.Infrastructure.Data.Context.InvoiceEventTable,FeCoEventos.Util.TableLog.ILogAzure)">
+            <summary>
+            Se busca en el storage el archivo XML del Evento
+            </summary>
+            <param name="eventTable">Datos del registro de un evento</param>
+            <param name="log">Log</param>
+            <returns>Archivo xml codificado en base64</returns>
+        </member>
+        <member name="M:FeCoEventos.Util.TableLog.LogAzure.WriteComment(System.String,System.String,FeCoEventos.Util.TableLog.LevelMsn,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="pname"></param>
+            <param name="pcomment"></param>
+            <param name="pLevel"></param>
+            <param name="timeElapse"></param>
+        </member>
+        <member name="T:TFHKA.EventsDian.Infrastructure.Data.Context.ApplicationDbContext">
+            <summary>
+            Clase Context para manejo de DB
+            </summary>
+        </member>
+        <member name="M:TFHKA.EventsDian.Infrastructure.Data.Context.ApplicationDbContext.SaveUpdateEventInvoice(TFHKA.EventsDian.Infrastructure.Data.Context.InvoiceEventTable,System.Byte,Microsoft.Extensions.Configuration.IConfiguration,FeCoEventos.Util.TableLog.ILogAzure)">
+            <summary>
+            Metodo de implementacion de SP de Persistencia y Actualizaciones
+            </summary>
+            <param name="invoiceEvent">Entidad con los valores</param>
+            <returns></returns>
+        </member>
+        <member name="M:TFHKA.EventsDian.Infrastructure.Data.Context.ApplicationDbContext.GetAnysInvoiceEvents(System.Int32,System.String,System.DateTime,System.DateTime,FeCoEventos.Util.TableLog.ILogAzure,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Consultar en invoice_events si existe un registro con 
+            </summary>
+            <param name="status">Estatus de los Eventos</param>
+            <param name="evenCode">Codigo de los Eventso</param>
+            <param name="dateFrom">Fecha Inicial</param>
+            <param name="dateEnd">Fecha Final</param>
+            <returns></returns>
+        </member>
+        <member name="M:TFHKA.EventsDian.Infrastructure.Data.Context.ApplicationDbContext.GetInvoiceEventsReadByEventUuid(System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration,FeCoEventos.Util.TableLog.ILogAzure)">
+            <summary>
+            Metodo de implementacion para consumumir el SP Consultar en invoice_events si existe un registro con event_uuid y event_id
+            </summary>
+            <param name="eventUuid">HASH identificador del evento</param>
+            <param name="eventId">Identificador del evento en la tabla invoice_events</param>
+            <returns></returns>
+        </member>
+        <member name="M:TFHKA.EventsDian.Infrastructure.Data.Context.ApplicationDbContext.GetEventStatus(System.String,System.String,Microsoft.Extensions.Configuration.IConfiguration,FeCoEventos.Util.TableLog.ILogAzure)">
+            <summary>
+            Metodo de implementacion para consumumir el SP de consulta de un Evento especifico por su EventId y TrackId
+            </summary>
+            <param name="eventId">EventId</param>
+            <param name="trackId">TrackId</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

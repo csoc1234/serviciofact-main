@@ -1,0 +1,48 @@
+Need to add this packages:
+- Microsoft.VisualStudio.Web.CodeGeneration (Optional)
+- Microsoft.EntityFrameworkCore
+- Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.EntityFrameworkCore.SqlServer.Design
+- Microsoft.EntityFrameworkCore.Tools (Optional)
+
+#Configurar la clase Context  y la Conecctions String en appsetting.json y StartUp.cs
+
+Scaffold-DbContext "Server=.;Database=MobilskaDb;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir DataBase -Force
+
+add-migration initial -Context APIContext
+
+
+###Empujar una Migración en una Base de Dato Existente:
+
+Command Consola Normal Shell:
+
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+Power-Shell:
+Add-Migration InitialCreate
+Update-Database
+
+
+###Extraer una Migración desde BD con Tablas existentes
+
+Command Consola Normal Shell:
+
+dotnet ef dbcontext scaffold "server=localhost;port=3306;database=thefacto_extranet;uid=root;" MySql.Data.EntityFrameworkCore
+dotnet ef dbcontext scaffold "server=localhost;port=3306;database=vesisgestiontfhka2;uid=root;" MySql.Data.EntityFrameworkCore -o Models -t sisg_distributors --context-dir Models -c AccessContext2
+
+Power-Shell:
+Scaffold-DbContext "server=localhost;port=3306;database=thefacto_extranet;uid=root;" MySql.Data.EntityFrameworkCore.Design -OutputDir Models/DB
+Scaffold-DbContext "server=localhost;port=3306;database=vesisgestiontfhka2;uid=root;" MySql.Data.EntityFrameworkCore -OutputDir Models -Tables "sisg_distributors" -ContextDir Models -Context AccessContext2
+
+
+##Para Ambiente Docker:
+
+& 'C:\Program Files\Docker\Docker\DockerCli.exe' -SwitchDaemon
+
+Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Containers") -All
+
+docker build -t aspnetapp .
+docker run -d -p 8080:80 --name myapp aspnetapp
+docker-compose build
+docker-compose up

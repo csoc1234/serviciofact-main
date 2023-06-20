@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIAttachedDocument", "APIAttachedDocument\APIAttachedDocument.csproj", "{4FEF550E-4B5F-4A61-A229-B17BAFCB2E20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIFactoringIntegration", "APIFactoringIntegration\APIFactoringIntegration.csproj", "{1E33AA5E-C8FB-44D2-8A06-F531E32C6B43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIGetValidDocs", "APIGetValidDocs\APIGetValidDocs.csproj", "{AD51724D-E082-402B-BE36-CDA8FAFE7E5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIValidateEvents", "APIValidateEvents\APIValidateEvents.csproj", "{853EA3E2-31FC-4E52-8A52-EF314EC8A442}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contributors", "Contributors\Contributors.csproj", "{E5C65BF1-3166-46CC-8FA4-F05B5EEE3CE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeCoEventos", "FeCoEventos\FeCoEventos.csproj", "{C4C8D9EA-2A49-4C59-AA09-D77980A1EF66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{6D141CBF-FAF2-442A-9911-6DDAA5FE6113}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FEF550E-4B5F-4A61-A229-B17BAFCB2E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FEF550E-4B5F-4A61-A229-B17BAFCB2E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FEF550E-4B5F-4A61-A229-B17BAFCB2E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FEF550E-4B5F-4A61-A229-B17BAFCB2E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E33AA5E-C8FB-44D2-8A06-F531E32C6B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E33AA5E-C8FB-44D2-8A06-F531E32C6B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E33AA5E-C8FB-44D2-8A06-F531E32C6B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E33AA5E-C8FB-44D2-8A06-F531E32C6B43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD51724D-E082-402B-BE36-CDA8FAFE7E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD51724D-E082-402B-BE36-CDA8FAFE7E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD51724D-E082-402B-BE36-CDA8FAFE7E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD51724D-E082-402B-BE36-CDA8FAFE7E5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853EA3E2-31FC-4E52-8A52-EF314EC8A442}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853EA3E2-31FC-4E52-8A52-EF314EC8A442}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853EA3E2-31FC-4E52-8A52-EF314EC8A442}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853EA3E2-31FC-4E52-8A52-EF314EC8A442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C65BF1-3166-46CC-8FA4-F05B5EEE3CE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C65BF1-3166-46CC-8FA4-F05B5EEE3CE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C65BF1-3166-46CC-8FA4-F05B5EEE3CE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C65BF1-3166-46CC-8FA4-F05B5EEE3CE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C8D9EA-2A49-4C59-AA09-D77980A1EF66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C8D9EA-2A49-4C59-AA09-D77980A1EF66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C8D9EA-2A49-4C59-AA09-D77980A1EF66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C8D9EA-2A49-4C59-AA09-D77980A1EF66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D141CBF-FAF2-442A-9911-6DDAA5FE6113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D141CBF-FAF2-442A-9911-6DDAA5FE6113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D141CBF-FAF2-442A-9911-6DDAA5FE6113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D141CBF-FAF2-442A-9911-6DDAA5FE6113}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {621AA1B8-7419-4230-8767-66FEE4907F77}
+	EndGlobalSection
+EndGlobal

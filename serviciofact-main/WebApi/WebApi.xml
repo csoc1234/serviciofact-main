@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.InvoicesController.GetInvoice(System.Int32)">
+            <summary>
+            Indica si una Factura es apta para negociar como Titulo Valor
+            </summary>
+            <param name="id">Id de la Factura en Emision 2.1</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.InvoicesController.GetInvoicesPerTaxpayer(System.Int32,System.String,System.String)">
+            <summary>
+            Obtiene una lista de Facturas de un Emisor determinado en un rango de fechas
+            </summary>
+            <param name="idEnterprise">Identidficador del Emisor</param>
+            <param name="dateFrom">Fecha Inicial</param>
+            <param name="dateTo">Fecha Final</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.InvoicesController.GetInvoicesHab(System.String)">
+            <summary>
+            Obtiene una lista de Facturas de Habilitacion de un Emisor determinado
+            </summary>
+            <param name="nit">NIT del Emisor</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.InvoicesController.PostInvoice(WebApi.Application.Dto.InvoiceDto)">
+            <summary>
+            Registra una Factora Negociable en Factoring
+            </summary>
+            <param name="invoiceDto">Datos de la Factura</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.StatusController.LastInvoiceEventStatus(System.String,System.String,System.String)">
+            <summary>
+            Resumen del estado de una factura en la DIAN
+            </summary>
+            <param name="supplierIdentification"></param>
+            <param name="cufe"></param>
+            <param name="documentId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApi.Infrastructure.Data.Context.EmisionDbContext">
+            <summary>
+            Clase Context para manejo de DB
+            </summary>
+        </member>
+        <member name="M:WebApi.Infrastructure.Data.Context.EmisionDbContext.GetAnysInvoiceAsync(System.Int32)">
+            <summary>
+            Metodo de implementacion para consumumir el SP Si existe la factura no procesa y si no existe la factura procede
+            </summary>
+            <param name="idInvoice">Identificador Primario de la Factura en Emision21</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Infrastructure.Data.Context.FactoringDbContext.TableInvoiceExistsAsync(System.Int32)">
+            <summary>
+            Metodo de implementacion para consumumir el SP [uspTableExists] que indica si una Factura tiene documentos referenciados o no
+            </summary>
+            <param name="invoiceId">Numero Documento Factura</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Infrastructure.Data.Context.FactoringDbContext.SaveInvoiceFactoring(WebApi.Infrastructure.Data.Context.InvoiceFactoringTable)">
+            <summary>
+            Metodo de implementacion de SP de Persistencia de Facturas Factoring
+            </summary>
+            <param name="invoiceFactoring">Entidad con los valores</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

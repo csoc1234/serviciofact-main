@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Contributors</name>
+    </assembly>
+    <members>
+        <member name="M:Contributors.Controllers.IssuersController.Get">
+            <summary>
+            Retorna una lista de todos los Contribuyentes Emisores afiliados a Factoring
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Controllers.IssuersController.Get(System.String)">
+            <summary>
+            Obtiene un Contribuyente Emisor afiliados a Factoring por su Nit
+            </summary>
+            <param name="nit">Nit del Contribuyente Emisor</param>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Controllers.IssuersController.Post(Contributors.Models.EnterpriseTable)">
+            <summary>
+            Establece un Nuevo Contribuyente Emisor
+            </summary>
+            <param name="enterprise">>Datos del Nuevo Contribuyente Emisor</param>
+        </member>
+        <member name="M:Contributors.Controllers.IssuersController.Put(System.Int32,Contributors.Models.EnterpriseTable)">
+            <summary>
+            Actualiza un Contribuyente Emisor
+            </summary>
+            <param name="id">Identificador</param>
+            <param name="enterprise">Datos del Contribuyente Emisor</param>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Controllers.IssuersController.Delete(System.Int32)">
+            <summary>
+            Elimina un Contribuyente Emisor por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Controllers.StatusTaskController.ChangeStatus(System.Int32,Contributors.Models.StatusTask)">
+            <summary>
+            Metodo para cambiar el estatus del proceso de tareas
+            </summary>
+            <param name="id"></param>
+            <param name="process"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Controllers.StatusTaskController.PutTaxpayerStatus(System.String,System.Int32,System.Int32)">
+            <summary>Actualiza el status y ambiente de un contribuyente durante la habilitación.</summary>
+            <param name="nit">NIT del Contribuyente.</param>
+            <param name="status">Status del proceso de habilitación.</param>
+            <param name="environment">Ambiente donde se encuentra ese contribuyente.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Controllers.StatusTaskController.GetTaxpayerInfo(System.String)">
+            <summary>Obtiene la información de un contribuyente en su proceso de habilitación.</summary>
+            <param name="nit">NIT del Contribuyente.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Contributors.Infraestructure.Logging.LogAzure.WriteComment(System.String,System.String,Contributors.Infraestructure.Logging.LevelMsn,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="pname"></param>
+            <param name="pcomment"></param>
+            <param name="pLevel"></param>
+            <param name="timeElapse"></param>
+        </member>
+    </members>
+</doc>
